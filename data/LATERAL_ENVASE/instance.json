@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "subproblem": "LATERAL_ENVASE",
+  "load_type": "LATERAL",
+  "waste_type": "ENVASE",
+  "problem_rules": {
+    "replenishment": "allowed (a route may visit DUMP multiple times)",
+    "route_start_end": "Each route starts at BASE and ends at BASE. The last stop before BASE must be DUMP."
+  },
+  "limits": {
+    "max_routes": 6,
+    "max_containers_before_dump": 294,
+    "route_max_work_s": 24000
+  },
+  "service_times_s": {
+    "container": 65.0,
+    "dump": 1800.0
+  },
+  "capacity_assumptions": {
+    "truck_payload_kg": 9425.0,
+    "mean_container_weight_kg": 32.0,
+    "how_max_containers_is_computed": "floor(truck_payload_kg / mean_container_weight_kg) (unless max_containers_before_dump is given explicitly)"
+  },
+  "files": {
+    "nodes": "nodes.csv",
+    "time_matrix": "time_matrix.npz",
+    "time_matrix_npz_key": "T",
+    "matrix_units": "seconds"
+  }
+}

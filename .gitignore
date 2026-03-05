@@ -1,0 +1,6 @@
+# Outputs / temporales del student-kit
+student-kit/algorithm_output/
+algorithm_output/
+
+# venv local si lo creas dentro de student-kit (opcional)
+student-kit/venv/

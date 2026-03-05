@@ -1,0 +1,12 @@
+numpy>=1.26
+pandas>=2.1
+
+# Geo stack
+shapely>=2.0
+pyproj>=3.6
+geopandas>=0.14
+fiona>=1.9
+
+# Road routing / OSM graph
+networkx>=3.2
+osmnx>=1.9
