@@ -14,7 +14,7 @@ Colocar los logos en:
 Este repositorio forma parte del programa **Retos‑UPCT** (<https://retos.upct.es>), una iniciativa que conecta el aprendizaje universitario con **retos reales**: problemas que existen fuera del aula, con datos y restricciones operativas realistas y un objetivo claro de impacto.
 
 **Reto oficial:** **SmartEcoRutas — Optimización algorítmica de rutas de recogida de residuos urbanos en Cartagena**  
-**Patrocinio:** **Lhicarsa**, concesionaria del servicio de recogida de residuos en Cartagena. Lhicarsa está interesada en analizar y aprender de las soluciones que desarrolléis. Además, **el premio económico para el equipo ganador lo aporta Lhicarsa**.
+**Patrocinio:** **Lhicarsa**, concesionaria del servicio de recogida de residuos en Cartagena. Lhicarsa está interesada en analizar y aprender de las soluciones que desarrolléis. Además, **el premio económico de 1000 EUROS para el equipo ganador lo aporta Lhicarsa**.
 
 Descripción pública del reto: <https://retos.upct.es/informacion/reto-smartecorutas>
 
@@ -32,7 +32,7 @@ Una mejora de minutos por ruta, multiplicada por camiones y jornadas, puede trad
 - menos costes operativos,
 - y (como efecto colateral positivo) menos emisiones.
 
-**Lo que hagáis aquí puede tener impacto en la ciudad**: no porque mañana se vaya a cambiar el servicio, sino porque aprender a resolver bien este problema es exactamente lo que se necesita para mejorar servicios urbanos modernos.
+**Lo que hagáis aquí puede tener impacto en la ciudad**: no porque mañana se vaya a cambiar el servicio, sino porque aprender a resolver bien este problema es lo que se necesita para mejorar servicios urbanos modernos.
 
 ---
 
@@ -45,7 +45,7 @@ Una mejora de minutos por ruta, multiplicada por camiones y jornadas, puede trad
 - [5) Formato de salida: qué debe devolver tu algoritmo](#5-formato-de-salida-qué-debe-devolver-tu-algoritmo)
 - [6) Restricciones duras (lo que da ERROR)](#6-restricciones-duras-lo-que-da-error)
 - [7) Cómo se calcula el tiempo de una ruta](#7-cómo-se-calcula-el-tiempo-de-una-ruta)
-- [8) Ejecutar en local (y entender lo que pasa)](#8-ejecutar-en-local-y-entender-lo-que-pasa)
+- [8) Ejecutar en tu ordenador](#8-ejecutar-en-local-y-entender-lo-que-pasa)
 - [9) Salidas y visualización (KMZ/GPKG)](#9-salidas-y-visualización-kmzgpkg)
 - [10) Protocolo oficial de prueba](#10-protocolo-oficial-de-prueba)
 - [11) Criterio para decidir ganador](#11-criterio-para-decidir-ganador)
@@ -218,7 +218,7 @@ En código, puedes obtener:
 
 ---
 
-## 8) Ejecutar en local (y entender lo que pasa)
+## 8) Ejecutar en tu ordenador 
 
 ### 8.1) Preparar entorno (recomendado)
 
@@ -266,8 +266,8 @@ Para cada instancia se genera en `algorithm_output/<INSTANCIA>/`:
 > Nota: el export visual **NO afecta** a la evaluación; sirve para inspección.
 
 ### 9.1) Visualización recomendada
-- **Google Earth**: abre `export.kmz` y activa/desactiva rutas por carpeta.
 - **QGIS**: carga `export.gpkg` o `export.kmz` y añade un mapa base OSM como fondo.
+- **Google Earth**: abre `export.kmz` y activa/desactiva rutas por carpeta.
 
 ### 9.2) Nota sobre “trazado por calles”
 Los tiempos de entrada están precalculados usando red vial basada en **OpenStreetMap**.  
@@ -277,7 +277,7 @@ En el export visual puede haber algún tramo que se dibuje con fallback (undirec
 
 ## 10) Protocolo oficial de prueba
 
-Evaluación en las 4 instancias oficiales con:
+Recibiremos los algoritmos de los alumnos, enviados como os indicamos y evaluamos como se indica más adelante en las 4 instancias oficiales con:
 - **15 minutos** de límite en cada una de las instancias 
 - tolerancia máxima de **5 segundos** fuera de tiempo
 
@@ -289,12 +289,8 @@ Tu algoritmo debe controlar su presupuesto temporal: si estás haciendo búsqued
 
 Se agregan resultados de las 4 instancias y se compara:
 
-1. **Número total de rutas** (criterio principal).
-2. **Tiempo total de viaje** (`total_travel_time_s`) como desempate.
-
-Formalmente: comparación lexicográfica de:
-
-`(rutas_totales, traveling_time_total)`
+1. **Número total de rutas** (criterio principal, el que tenga menos rutas sumadas las cuatro instancias gana).
+2. **Tiempo total de viaje** (`total_travel_time_s`) como desempate (menor tiempo es mejor).
 
 ---
 
@@ -309,7 +305,7 @@ Para participar en **SmartEcoRutas** dentro del programa **Retos-UPCT**, el equi
   a cualquiera de estos correos:
   - **pablo.pavon@upct.es**
   - **pilar.jimenez@upct.es**
-- **Fecha tope de inscripción:** **18 de marzo de 2026**.
+- **Fecha tope de inscripción:** **24 de marzo de 2026**.
 
 ---
 
