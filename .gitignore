@@ -4,3 +4,6 @@ algorithm_output/
 
 # venv local si lo creas dentro de student-kit (opcional)
 student-kit/venv/
+
+# Entregas de los estudiantes
+entregas/
